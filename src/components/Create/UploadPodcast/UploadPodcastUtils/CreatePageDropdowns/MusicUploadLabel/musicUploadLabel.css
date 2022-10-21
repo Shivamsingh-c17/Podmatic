@@ -1,0 +1,55 @@
+.vinyl-record-img {
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+}
+
+.uploaded-podcast-label {
+	position: relative;
+}
+
+.uploaded-podcast-label:hover {
+	cursor: pointer;
+}
+
+.edit-icon-podcast-btn {
+	display: none;
+	position: absolute;
+	margin: 0px;
+	padding: 5px;
+	padding-left: 9px;
+	bottom: 0px;
+	right: 0px;
+	width: 25px;
+	color: #fcac0d;
+	background-color: #323232;
+	border-radius: 8px;
+	border: none;
+}
+
+.edit-icon-podcast-btn:hover {
+	cursor: pointer;
+}
+
+.uploaded-podcast-label:hover .edit-icon-podcast-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#uploaded-podcast-name {
+	font-family: var(--Poppins);
+	font-size: 0.75rem;
+	font-weight: 300;
+	display: inline-block;
+	width: 84px;
+}
+
+#uploaded-podcast-name:hover {
+	cursor: pointer;
+}
+
+.podcast_limit_tooltip {
+	position: absolute;
+	margin-top: 100px !important;
+}
