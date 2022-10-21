@@ -1,0 +1,41 @@
+import React from "react";
+import "./howItWorks.css";
+import Card from "../../Layout/Card/Card.js";
+import createContent from "../../../assets/create_content.png";
+import nftLogo from "../../../assets/nft_logo.png";
+import soundWave from "../../../assets/sound_wave.png";
+import how_it_works from "../../../assets/new-assets/how_it_works.png";
+
+export default function HowItWorks() {
+	return (
+		<div className="how-it-works-bg">
+			{/* Added brand logo */}
+			<img className="brand-logo-how-it-works" src={how_it_works} alt="brand logo" />
+			<div className="how-it-works-box">
+				<div className="row justify-content-center">
+					<div className="section-heading col-lg-3 col-md-3 col-sm-12 p-0 m-0 text-center text-md-left">
+						<h2>How it works</h2>
+					</div>
+					<div className="col-lg-7 col-md-7 col-sm-12 p-0 ml-lg-0 ml-md-1 ml-sm-3 section-description">
+						<p>
+							Podmatic provides a decentralized platform for podcasters to upload their art on the internet for trading. Users/Fans just need to create a digital wallet to trade the NFTs. This makes buying NFTs as easy as online shopping. There is no hassle of going anywhere. Everything can be done in the comfort of home. The only prerequisite is some amount of cryptocurrency in your digital wallet.
+						</p>
+						<p>
+							Podcasters can raise money by selling their podcasts as NFTs, while fans can support and form closer connections to their idols by purchasing a real stake in their careers. Even if the art has been sold by the podcaster, they will still be getting 5% of the trade each time the NFT is sold! Thus, providing the podcaster with benefits and the recognition they deserve.
+						</p>
+						<p>
+							The podcaster will have the freedom to decide the price at which they want to sell their podcast NFT. Once all the information has been filled in on the Create Page, the podcaster will have to pay a small gas fee (almost negligible) while uploading their podcast. After paying the gas fee, the NFT will be created and featured in the Podmatic library. Now, users will be able to listen to the podcast and purchase the NFT.
+						</p>
+						<div className="mt-5 cards">
+							<Card imagePath={nftLogo}>Create Podcast NFT</Card>
+							<Card imagePath={createContent}>
+								Buy/Sell NFTs
+							</Card>
+							<Card imagePath={soundWave}>Listen Podcasts</Card>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
