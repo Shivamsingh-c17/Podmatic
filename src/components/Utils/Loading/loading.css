@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+	--Poppins: "Poppins", sans-serif;
+	--Roboto: "Roboto", sans-serif;
+}
+
+#loadingContainer:before {
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iOTUlIj48c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijk1JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
+	background-size: 100%;
+	background-image: -moz-radial-gradient(center, ellipse farthest-corner, rgba(0, 0, 0, 0) 20%, #000000 95%);
+	background-image: -webkit-radial-gradient(center, ellipse farthest-corner, rgba(0, 0, 0, 0) 20%, #000000 95%);
+	background-image: radial-gradient(ellipse farthest-corner at center, rgba(0, 0, 0, 0) 20%, #000000 95%);
+	position: absolute;
+	content: "";
+	z-index: 0;
+	opacity: 0.7;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+#loadingContainer:after {
+	background: url("https://s.cdpn.io/1715/noise-1.png");
+	position: absolute;
+	content: "";
+	z-index: 1;
+	opacity: 0.8;
+	filter: brightness(0.1);
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+/**************************************************************************/
+/*****************************    Loaders    ******************************/
+/**************************************************************************/
+
+.loading_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	border-radius: 12px;
+	width: 60%;
+	padding: 50px 40px 50px 40px;
+}
+
+@media (max-width: 1100px) {
+	.loading_container.loading_container {
+		width: 80%;
+	}
+}
+
+.loading_podcast_info_container {
+	height: 100vh;
+	width: 100vw;
+	background-image: url("../../../assets/hero.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.loading_podcast_info_box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 12px;
+	width: 60%;
+	padding: 50px 40px 50px 40px;
+}
+
+/**************************************************************************/
+/*****************************    Spinner    ******************************/
+/**************************************************************************/
+
+.loadingSpinner {
+	width: 50px;
+	height: 50px;
+	display: grid;
+	border: 4px solid #0000;
+	border-radius: 50%;
+	border-color: #ccc #0000;
+	animation: s6 1s infinite linear;
+}
+.loadingSpinner::before,
+.loadingSpinner::after {
+	content: "";
+	grid-area: 1/1;
+	margin: 2px;
+	border: inherit;
+	border-radius: 50%;
+}
+.loadingSpinner::before {
+	border-color: #fcac0d #0000;
+	animation: inherit;
+	animation-duration: 0.5s;
+	animation-direction: reverse;
+}
+.loadingSpinner::after {
+	margin: 8px;
+}
+
+@keyframes s6 {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+/**************************************************************************/
+/*******************************    Text    *******************************/
+/**************************************************************************/
+
+.classic-7 {
+	--w: 10ch;
+	margin-top: 40px;
+	margin-left: 42px;
+	font-family: monospace;
+	font-size: 1.4em;
+	line-height: 1.2em;
+	letter-spacing: var(--w);
+	width: var(--w);
+	overflow: hidden;
+	white-space: nowrap;
+	color: transparent;
+	animation: c7 2s infinite;
+}
+
+.classic-7:before {
+	content: "Loading...";
+	font-weight: 500;
+}
+
+@keyframes c7 {
+	0% {
+		text-shadow: calc(0 * var(--w)) -1.2em #fcac0d, calc(-1 * var(--w)) -1.2em #fcac0d, calc(-2 * var(--w)) -1.2em #fcac0d,
+			calc(-3 * var(--w)) -1.2em #fcac0d, calc(-4 * var(--w)) -1.2em #fcac0d, calc(-5 * var(--w)) -1.2em #fcac0d, calc(-6 * var(--w)) -1.2em #fcac0d,
+			calc(-7 * var(--w)) -1.2em #fcac0d, calc(-8 * var(--w)) -1.2em #fcac0d, calc(-9 * var(--w)) -1.2em #fcac0d;
+	}
+	4% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) -1.2em #fcac0d, calc(-2 * var(--w)) -1.2em #fcac0d, calc(-3 * var(--w)) -1.2em #fcac0d,
+			calc(-4 * var(--w)) -1.2em #fcac0d, calc(-5 * var(--w)) -1.2em #fcac0d, calc(-6 * var(--w)) -1.2em #fcac0d, calc(-7 * var(--w)) -1.2em #fcac0d,
+			calc(-8 * var(--w)) -1.2em #fcac0d, calc(-9 * var(--w)) -1.2em #fcac0d;
+	}
+	8% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) -1.2em #fcac0d, calc(-3 * var(--w)) -1.2em #fcac0d,
+			calc(-4 * var(--w)) -1.2em #fcac0d, calc(-5 * var(--w)) -1.2em #fcac0d, calc(-6 * var(--w)) -1.2em #fcac0d, calc(-7 * var(--w)) -1.2em #fcac0d,
+			calc(-8 * var(--w)) -1.2em #fcac0d, calc(-9 * var(--w)) -1.2em #fcac0d;
+	}
+	12% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) -1.2em #fcac0d,
+			calc(-4 * var(--w)) -1.2em #fcac0d, calc(-5 * var(--w)) -1.2em #fcac0d, calc(-6 * var(--w)) -1.2em #fcac0d, calc(-7 * var(--w)) -1.2em #fcac0d,
+			calc(-8 * var(--w)) -1.2em #fcac0d, calc(-9 * var(--w)) -1.2em #fcac0d;
+	}
+	16% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) -1.2em #fcac0d, calc(-5 * var(--w)) -1.2em #fcac0d, calc(-6 * var(--w)) -1.2em #fcac0d, calc(-7 * var(--w)) -1.2em #fcac0d,
+			calc(-8 * var(--w)) -1.2em #fcac0d, calc(-9 * var(--w)) -1.2em #fcac0d;
+	}
+	20% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) -1.2em #fcac0d, calc(-6 * var(--w)) -1.2em #fcac0d, calc(-7 * var(--w)) -1.2em #fcac0d,
+			calc(-8 * var(--w)) -1.2em #fcac0d, calc(-9 * var(--w)) -1.2em #fcac0d;
+	}
+	24% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) 0 #fcac0d, calc(-6 * var(--w)) -1.2em #fcac0d, calc(-7 * var(--w)) -1.2em #fcac0d,
+			calc(-8 * var(--w)) -1.2em #fcac0d, calc(-9 * var(--w)) -1.2em #fcac0d;
+	}
+	28% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) 0 #fcac0d, calc(-6 * var(--w)) 0 #fcac0d, calc(-7 * var(--w)) -1.2em #fcac0d,
+			calc(-8 * var(--w)) -1.2em #fcac0d, calc(-9 * var(--w)) -1.2em #fcac0d;
+	}
+	32% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) 0 #fcac0d, calc(-6 * var(--w)) 0 #fcac0d, calc(-7 * var(--w)) 0 #fcac0d,
+			calc(-8 * var(--w)) -1.2em #fcac0d, calc(-9 * var(--w)) -1.2em #fcac0d;
+	}
+	36% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) 0 #fcac0d, calc(-6 * var(--w)) 0 #fcac0d, calc(-7 * var(--w)) 0 #fcac0d,
+			calc(-8 * var(--w)) 0 #fcac0d, calc(-9 * var(--w)) -1.2em #fcac0d;
+	}
+	40%,
+	60% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) 0 #fcac0d, calc(-6 * var(--w)) 0 #fcac0d, calc(-7 * var(--w)) 0 #fcac0d,
+			calc(-8 * var(--w)) 0 #fcac0d, calc(-9 * var(--w)) 0 #fcac0d;
+	}
+	64% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) 0 #fcac0d, calc(-6 * var(--w)) 0 #fcac0d, calc(-7 * var(--w)) 0 #fcac0d,
+			calc(-8 * var(--w)) 0 #fcac0d, calc(-9 * var(--w)) 1.2em #fcac0d;
+	}
+	68% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) 0 #fcac0d, calc(-6 * var(--w)) 0 #fcac0d, calc(-7 * var(--w)) 0 #fcac0d,
+			calc(-8 * var(--w)) 1.2em #fcac0d, calc(-9 * var(--w)) 1.2em #fcac0d;
+	}
+	72% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) 0 #fcac0d, calc(-6 * var(--w)) 0 #fcac0d, calc(-7 * var(--w)) 1.2em #fcac0d,
+			calc(-8 * var(--w)) 1.2em #fcac0d, calc(-9 * var(--w)) 1.2em #fcac0d;
+	}
+	76% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) 0 #fcac0d, calc(-6 * var(--w)) 1.2em #fcac0d, calc(-7 * var(--w)) 1.2em #fcac0d,
+			calc(-8 * var(--w)) 1.2em #fcac0d, calc(-9 * var(--w)) 1.2em #fcac0d;
+	}
+	80% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 0 #fcac0d, calc(-5 * var(--w)) 1.2em #fcac0d, calc(-6 * var(--w)) 1.2em #fcac0d, calc(-7 * var(--w)) 1.2em #fcac0d,
+			calc(-8 * var(--w)) 1.2em #fcac0d, calc(-9 * var(--w)) 1.2em #fcac0d;
+	}
+	84% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 0 #fcac0d,
+			calc(-4 * var(--w)) 1.2em #fcac0d, calc(-5 * var(--w)) 1.2em #fcac0d, calc(-6 * var(--w)) 1.2em #fcac0d, calc(-7 * var(--w)) 1.2em #fcac0d,
+			calc(-8 * var(--w)) 1.2em #fcac0d, calc(-9 * var(--w)) 1.2em #fcac0d;
+	}
+	88% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 0 #fcac0d, calc(-3 * var(--w)) 1.2em #fcac0d,
+			calc(-4 * var(--w)) 1.2em #fcac0d, calc(-5 * var(--w)) 1.2em #fcac0d, calc(-6 * var(--w)) 1.2em #fcac0d, calc(-7 * var(--w)) 1.2em #fcac0d,
+			calc(-8 * var(--w)) 1.2em #fcac0d, calc(-9 * var(--w)) 1.2em #fcac0d;
+	}
+	92% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 0 #fcac0d, calc(-2 * var(--w)) 1.2em #fcac0d, calc(-3 * var(--w)) 1.2em #fcac0d,
+			calc(-4 * var(--w)) 1.2em #fcac0d, calc(-5 * var(--w)) 1.2em #fcac0d, calc(-6 * var(--w)) 1.2em #fcac0d, calc(-7 * var(--w)) 1.2em #fcac0d,
+			calc(-8 * var(--w)) 1.2em #fcac0d, calc(-9 * var(--w)) 1.2em #fcac0d;
+	}
+	96% {
+		text-shadow: calc(0 * var(--w)) 0 #fcac0d, calc(-1 * var(--w)) 1.2em #fcac0d, calc(-2 * var(--w)) 1.2em #fcac0d, calc(-3 * var(--w)) 1.2em #fcac0d,
+			calc(-4 * var(--w)) 1.2em #fcac0d, calc(-5 * var(--w)) 1.2em #fcac0d, calc(-6 * var(--w)) 1.2em #fcac0d, calc(-7 * var(--w)) 1.2em #fcac0d,
+			calc(-8 * var(--w)) 1.2em #fcac0d, calc(-9 * var(--w)) 1.2em #fcac0d;
+	}
+	100% {
+		text-shadow: calc(0 * var(--w)) 1.2em #fcac0d, calc(-1 * var(--w)) 1.2em #fcac0d, calc(-2 * var(--w)) 1.2em #fcac0d, calc(-3 * var(--w)) 1.2em #fcac0d,
+			calc(-4 * var(--w)) 1.2em #fcac0d, calc(-5 * var(--w)) 1.2em #fcac0d, calc(-6 * var(--w)) 1.2em #fcac0d, calc(-7 * var(--w)) 1.2em #fcac0d,
+			calc(-8 * var(--w)) 1.2em #fcac0d, calc(-9 * var(--w)) 1.2em #fcac0d;
+	}
+}
+
+/**************************************************************************/
+/*****************************   Wait Text    *****************************/
+/**************************************************************************/
+
+.wait_text {
+	color: #ccc;
+	font-family: var(--Roboto);
+	font-size: 1em;
+	text-align: center;
+}
