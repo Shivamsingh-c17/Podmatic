@@ -28,3 +28,86 @@ We learnt several skills that included things from website development, web3, bl
 - polygon
 - streamchat
 - vercel
+
+## Try it out
+- Werbsite- https://podmatic.vercel.app
+- Walkthrough- https://www.youtube.com/watch?v=-kPGBuaVWX0&feature=youtu.be
+- Video- https://www.youtube.com/watch?v=A41cH1MLUOQ
+- Smart Contract- https://mumbai.polygonscan.com/address/0x67cF491ba9586E757732B971C00d5d9c488178dc
+
+## Tech Used
+
+### Frontend
+
+<p align="left">
+<img src = "https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+<img src = "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+<img src = "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+<img src = "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+</p>
+
+### Smart Contract and Backend
+
+<p align="left">
+<img src = "https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+<img src = "https://img.shields.io/badge/Solidity-e6e6e6?style=for-the-badge&logo=solidity&logoColor=black"/>
+</p>
+
+### Other
+
+<p>IPFS, Ganache, Truffle, Web3.js, Metamask, Infura, Moralis, Zapier, Stream</p>
+
+## How to setup
+
+-   Fork the repo to your account
+
+-   Clone the forked repo to your local system using `git clone https://github.com/<your-username>/Podmatic`
+
+-   Connect your local repo to the upstream using `git remote add upstream https://github.com/Pushpit07/Podmatic`
+
+-   Run `npm install` to install npm dependencies
+
+-   Start the local development blockchain on Ganache
+
+-   Connect Metamask to local Ganache blockcahin
+
+-   Run `truffle migrate --reset` in the terminal
+
+-   Run `npm start` to start the React application
+
+## How to contribute?
+
+-   **DO NOT** make and push changes to the main branch!
+
+-   **Always** keep your main/working branch in sync with the main repository `git pull upstream main` on the branch you are working on locally.
+
+-   **Always create a new branch** before making any changes `git checkout -b <new-branch-name>`, never ever make any changes directly on the master/main branch.
+
+## Running the Test Script
+
+Just run: `truffle test`
+
+## Migrate the Contract after making any changes inside the contracts folder
+
+`truffle migrate --reset`
+
+## Testing in Truffle console
+
+-   Run: `truffle console`
+
+-   `Podmatic.deployed().then(function(instance) {contract = instance})`
+
+-   Test the deployed contract:
+
+    `contract.address`
+
+    `contract.name()`
+
+    `contract.symbol()`
+
+-   To check the created song:
+    `contract.songs(0)`
+
+## Migrating to Polygon Testnet
+
+-   `truffle migrate --network polygonTestnet`
