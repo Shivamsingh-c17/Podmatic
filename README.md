@@ -2,6 +2,10 @@
 
 <img src="./homepage.png" alt="Podmatic Homepage">
 
+<br/>
+
+Podmatic is an NFT marketplace for podcasters and fans. We aim to uplift podcasters by enabling them to create NFTs of their podcasts and provide them with the royalties and recognition that they deserve.
+
 ## Inspiration
 In today’s world, Podcasters are struggling for monetary benefits for their work. The royalty distribution in its present form makes it difficult to keep the fair share of revenue podcasters generate on existing platforms. Moreover, there’s no transparent and decentralized platform for the same.
 
