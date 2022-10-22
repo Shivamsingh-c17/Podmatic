@@ -16,7 +16,12 @@ Podmatic is a decentralized platform that aims to uplift podcasters by enabling 
 We have created a platform through which podcasters can raise money by selling their podcasts as NFTs, while fans can support and form closer connections with their idols by purchasing a real stake in their careers. It helps fans connect on a deeper level with their idols through all the features we have on the platform. By basing the Podmatic platform on the Polygon blockchain and storing all the tracks on IPFS, there is no central server and so the storage costs are drastically reduced. This allows for more of the revenue to go directly to the podcasters, in a more secure, transparent, and decentralized way than ever before.
 
 ## Challenges we ran into
-The most important phase in the product development was thinking about what the podcast community really needs. We've talked to a lot of podcasters and think that we're very close to nailing it down to the minute details.
+
+- Bugs, bugs, and bugs.
+- Integrating the chat system with blockchain was one of the biggest challenges for us. We’ve developed features like a chat room(whose members are all the NFT holders of a podcaster), and private chats(between NFT holder and podcaster). And this feature is automated. We don’t need to manually create rooms. Our community will reside on the platform itself.
+- Writing Solidity code covering all the edge cases was a bit challenging, but we made sure our platform is secure to use.
+- Making the platform’s UX smooth.
+- The most important phase in the product development was thinking about what the podcast community really needed. We've talked to a lot of podcasters and think that we're very close to nailing it down to the minute details.
 
 ## Accomplishments that we're proud of
 The team is very proud of turning around this project in a very short period of time during the hackathon.
