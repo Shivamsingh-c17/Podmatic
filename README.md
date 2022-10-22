@@ -29,12 +29,6 @@ We learnt several skills that included things from website development, web3, bl
 - streamchat
 - vercel
 
-## Try it out
-- Werbsite- https://podmatic.vercel.app
-- Walkthrough- https://www.youtube.com/watch?v=-kPGBuaVWX0&feature=youtu.be
-- Video- https://www.youtube.com/watch?v=A41cH1MLUOQ
-- Smart Contract- https://mumbai.polygonscan.com/address/0x67cF491ba9586E757732B971C00d5d9c488178dc
-
 ## Tech Used
 
 ### Frontend
