@@ -58,7 +58,7 @@ We learnt several skills that included things from website development, web3, bl
 
 ### Other
 
-<p>IPFS, Ganache, Truffle, Web3.js, Metamask, Infura, Moralis, Zapier, Stream</p>
+<p>IPFS, Ganache, Truffle, Polygon, Web3.js, Metamask, Infura, Moralis, Zapier, Stream</p>
 
 ## How to setup
 
@@ -66,7 +66,7 @@ We learnt several skills that included things from website development, web3, bl
 
 -   Clone the forked repo to your local system using `git clone https://github.com/<your-username>/Podmatic`
 
--   Connect your local repo to the upstream using `git remote add upstream https://github.com/Pushpit07/Podmatic`
+-   Connect your local repo to the upstream using `git remote add upstream https://github.com/<your-username>/Podmatic`
 
 -   Run `npm install` to install npm dependencies
 
