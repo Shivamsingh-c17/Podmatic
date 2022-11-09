@@ -30,13 +30,15 @@ The team is very proud of turning around this project in a very short period of 
 We learnt several skills that included things from website development, web3, blockchain, crypto, NFTs, talking to people for gathering feedback, making the product a good market-fit, etc.
 
 ## Built With
-- amazon-web-services
-- filecoin
-- html5
-- ipfs
-- polygon
-- streamchat
-- vercel
+- Amazon-web-services
+- Filecoin
+- React
+- Bootstrap
+- Infura
+- IPFS
+- Polygon
+- Streamchat
+- Vercel
 
 ## Tech Used
 
