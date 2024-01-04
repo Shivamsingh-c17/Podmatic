@@ -92,7 +92,7 @@ We learnt several skills that included things from website development, web3, bl
 
 Just run: `truffle test`
 
-## Migrate the Contract after making any changes inside the contracts folder
+## Migrate the Contract after making any changes inside the contracts folder.
 
 `truffle migrate --reset`
 
